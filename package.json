@@ -1,28 +1,43 @@
 {
-  "name": "linear-mcp-server",
-  "version": "0.1.0",
-  "description": "A Model Context Protocol server for the Linear API.",
-  "private": true,
+  "name": "@your-github-username/linear-mcp",
+  "version": "1.0.0",
+  "description": "Linear Model Context Protocol Server",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "type": "module",
   "bin": {
-    "linear-mcp-server": "./build/index.js"
+    "linear-mcp": "./dist/index.js"
   },
   "files": [
-    "build"
+    "dist"
   ],
   "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
     "prepare": "npm run build",
     "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accesslabs/linear-mcp-server-oauth.git"
+  },
+  "keywords": [
+    "linear",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
   "dependencies": {
-    "@linear/sdk": "^33.0.0",
-    "@modelcontextprotocol/sdk": "0.6.0",
-    "dotenv": "^16.4.6"
+    "@linear/sdk": "latest",
+    "@modelcontextprotocol/sdk": "latest",
+    "dotenv": "latest"
   },
   "devDependencies": {
-    "@types/node": "^20.17.9",
-    "typescript": "^5.3.3"
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
   }
 }

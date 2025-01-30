@@ -182,7 +182,7 @@ class LinearMCPClient {
 
   constructor(apiKey: string) {
     if (!apiKey) throw new Error("LINEAR_API_KEY environment variable is required");
-    this.client = new LinearClient({ apiKey });
+    this.client = new LinearClient({ accessToken: apiKey });
     this.rateLimiter = new RateLimiter();
   }
 
