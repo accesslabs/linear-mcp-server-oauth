@@ -1,5 +1,5 @@
 {
-  "name": "@your-github-username/linear-mcp",
+  "name": "@accesslabs/linear-mcp-oauth",
   "version": "1.0.0",
   "description": "Linear Model Context Protocol Server",
   "main": "dist/index.js",
@@ -15,10 +15,12 @@
     "build": "tsc && node -e \"require('fs').chmodSync('dist/index.js', '755')\"",
     "prepare": "npm run build",
     "watch": "tsc --watch",
-    "inspector": "npx @modelcontextprotocol/inspector dist/index.js"
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -29,7 +31,7 @@
     "mcp",
     "model-context-protocol"
   ],
-  "author": "Your Name",
+  "author": "Access Labs",
   "license": "MIT",
   "dependencies": {
     "@linear/sdk": "latest",

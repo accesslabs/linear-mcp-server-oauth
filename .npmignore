@@ -1,0 +1,14 @@
+# Source
+*.ts
+!*.d.ts
+
+# Config files
+.github/
+.gitignore
+tsconfig.json
+.npmignore
+
+# Development files
+node_modules/
+.env
+*.log 
