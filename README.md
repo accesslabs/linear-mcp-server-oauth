@@ -18,10 +18,10 @@ This server provides integration with Linear's issue tracking system through MCP
       "command": "npx",
       "args": [
         "-y",
-        "@modelcontextprotocol/server-linear"
+        "@accesslabs/linear-mcp-server-oauth"
       ],
       "env": {
-        "LINEAR_API_KEY": "your_linear_api_key_here"
+        "LINEAR_API_KEY": "your_oauth_access_token_here"
       }
     }
   }
